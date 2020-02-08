@@ -5,42 +5,78 @@
 		<title>Welcome to Jacky's Page!</title>
 		<link href="css/style.css" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
 	<body>
-		<h1>欢迎到我的小天地！噢耶！噢耶！噢耶耶耶！ </h1>
-		<p>作者：Jacky Cheung 其龙</h1></p>
-		<p><img src="images/selfie.png" alt="selfie image" width=100></p>
+		<!-- Header -->
+		<div class="header">
+			<p>欢迎到访 jackylung.github.io </p>
+		</div>
 		
-		<p>目标：</p>
-		<ul> <!-- changed to list in the tutorial -->
-		<li>成立自己的网页</li>
-		<li>学习HTML , CSS , JS(Javascript)</li>
-		<li>利用JS给网页增加动感效果</li>
-		<li>利用JS在网页写个小游戏</li>
-		</ul>
+		<!-- Navigation Bar -->
+		<div id="home" class="navbar">
+			<a href="#" onclick="return show('page0','page1','page2','page3','page4');">主页</a>
+			<a href="#" onclick="return show('page1','page2','page3','page0','page4');">目标</a>
+			<a href="#" onclick="return show('page2','page1','page3','page0','page4');">学习笔记</a>
+			<a href="#" onclick="return show('page3','page2','page1','page0','page4');">学习资源</a>
+			<a href="#" onclick="return show('page4','page2','page1','page3','page0');">小游戏</a>
+		</div>
 
-		<p>学习笔记：</p>
-		<p>1. 下载Visual Studio Code用于写程序。</p>
-		<p>2. 按照教学建立所需资料夹</p>
-		<p>3. 建立Github Page，上传写好的程序文档以发布自己的网页。如程序有修改更新，再上传一次便可更新网页。</p>
-		<p>---</p>
+		<!-- The flexible grid (content) -->
+		<div class="roll">
+			<div id="page0" style="display:block">
+				<a href="html/about.html"class="about">About</a>
+				<p>作者：Jacky Cheung 其龙</p>
+				<img src="images/selfie.png" id="selfie" alt="selfie image" width=100>
+				<p></p>
+				<img id="learning" src="images/learning.png" alt="My test image" height="200">
+			</div>
+			
+			<div id="page1" style="display:none">
+				<p>我的目标：</p>
+				<ul> <!-- changed to list in the tutorial -->
+				<li>成立自己的网页</li>
+				<li>学习HTML , CSS , JS(Javascript)</li>
+				<li>利用JS给网页增加动感效果</li>
+				<li>利用JS在网页写个小游戏</li>
+				</ul>
+				<p>努力学习！天天向天！</p>
+			</div>
 
+			<div id="page2" style="display:none">
+				<p>学习笔记：</p>
+				<p>1. 下载Visual Studio Code用于写程序。</p>
+				<p>2. 按照教学建立所需资料夹</p>
+				<p>3. 建立Github Page，上传写好的程序文档以发布自己的网页。如程序有修改更新，再上传一次便可更新网页。</p>
+				<p>Change specific image with another image when click it once.</p>
+				<p>Create multiple distinct pages in one HTML file using JS.</p>
+				<p>HTML Layouts.</p>
+				<p>---</p>
+			</div>
 
-		<p>学习资源：</p>
-		<ul>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"target="_blank">Developer.mozilla.org -- Getting started with the Web</a></li>
-		<li><a href="https://www.youtube.com/watch?v=4NfFFsQC77M"target="_blank">Visual Studio Code Web Dev Setup In 6 Minutes</li></a>
-		<li><a href="https://github.com"target="_blank">Area to publish your website - Gitthub</a></li>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser"target="_blank">2D breakout game using Phaser</a></li>
-		<li><a href="https://ithelp.ithome.com.tw/users/20103130/ironman/2125"target="_blank">用Javascript控制Arduino</a></li>
-		</ul>
+			<div id="page3" style="display:none">
+				<p>学习资源：</p>
+				<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"target="_blank">Developer.mozilla.org -- Getting started with the Web</a></li>
+				<li><a href="https://www.youtube.com/watch?v=4NfFFsQC77M"target="_blank">Visual Studio Code Web Dev Setup In 6 Minutes</li></a>
+				<li><a href="https://github.com"target="_blank">Area to publish your website - Gitthub</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser"target="_blank">2D breakout game using Phaser</a></li>
+				<li><a href="https://ithelp.ithome.com.tw/users/20103130/ironman/2125"target="_blank">用Javascript控制Arduino</a></li>
+				</ul>
+			</div>
 
-		<p></p>
-		<p>努力学习！天天向天！</p>
-		<img src="images/learning.png" alt="My test image" width="300" height="150">
-		
+			<div id="page4" style="display:none">
+			<h1>小程序: </h1>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			<p>作者：Jacky Cheung 其龙 © 2020-现在</p>
+		</div>
+
 		<script src="js/main.js"></script>
 	</body>
 </html>
